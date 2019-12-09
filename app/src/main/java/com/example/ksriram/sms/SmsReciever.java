@@ -36,20 +36,7 @@ public class SmsReciever extends BroadcastReceiver {
             }
 
            SmsManager smsManager = SmsManager.getDefault();
-    /*        Intent intent1 = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-            intent.putExtra(RecognizerIntent.EXTRA_PROMPT,"Say something!...");
-            try {
-                ((Activity)context).startActivityForResult(intent1,REQ_CODE_SPEECH_INPUT);
-                //startActivityForResult(intent1, REQ_CODE_SPEECH_INPUT);
-            } catch (ActivityNotFoundException a) {
-               /* Toast.makeText(getApplicationContext(),
-                        getString(R.string.speech_not_supported),
-                        Toast.LENGTH_SHORT).show();
-            }
-*/            //smsManager.sendTextMessage(senderNumber,null,"Hii...How can i help you",null,null);
+
            try {
                Intent intentone = new Intent(context.getApplicationContext(), MainActivity.class);
                intentone.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
